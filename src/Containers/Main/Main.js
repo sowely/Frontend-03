@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Text, View, SectionList, SafeAreaView, StyleSheet } from 'react-native';
-import { NavigationActions } from '@react-navigation/stack';
-import { StackActions, CommonActions } from '@react-navigation/native';
 import Btn from '../../Components/Buttons/Button'
-
-
+import BtnSecond from '../../Components/Buttons/ButtonSecond'
+import Item from '../../Components/TodoItem'
 
 const DATA = [
 	{
@@ -17,13 +15,7 @@ const DATA = [
 	},
 ]
 
-// const Item = ({ title }) => (
-// 	<View>
-// 		<Text>{title}</Text>
-// 	</View>
-// );
-
-const ToDoList = ({ navigation }) => {
+const Main = ({ navigation }) => {
 	// navigation.dispatch(
 	// 	CommonActions.reset({
 	// 		index: 0,
@@ -42,9 +34,8 @@ const ToDoList = ({ navigation }) => {
 				renderSectionHeader={({ section: { title } }) => (<Text>{title}</Text>)}
 			/>
 			<View style={styles.btns}>
-				<Btn btnTitle={'Создать новое дело'} />
-				<Btn btnTitle={'Создать новый список дел'} />
-				<Btn btnTitle={'Сменить аккаунт'} />
+				<Btn btnTitle={'Add List'} />
+				<BtnSecond btnTitle={'Log Out'} />
 			</View>
 
 		</View>
@@ -55,12 +46,14 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: 20,
-		// justifyContent: 'space-between',
 
 	},
 	btns: {
+		flexDirection: 'row',
+		marginBottom: -20,
+		justifyContent: 'space-between',
 
 	}
 })
 
-export default ToDoList;
+export default Main;

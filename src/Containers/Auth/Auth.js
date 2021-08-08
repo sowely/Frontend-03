@@ -3,8 +3,8 @@ import { View, StyleSheet, Button } from 'react-native';
 import Input from '../../Components/Inputs/Input'
 import PasswordInput from '../../Components/Inputs/PasswordInput'
 import Label from '../../Components/Labels/Label'
-import Link from '../../Components/Links/Link'
 import Btn from '../../Components/Buttons/Button'
+import BtnSecond from '../../Components/Buttons/ButtonSecond'
 
 
 
@@ -13,12 +13,12 @@ const Auth = ({ navigation }) => {
 
 	return (
 		<View style={styles.container}>
-			<Label text={'Введите почту'} />
+			<Label text={'Enter email'} />
 			<Input placeholder={'example@mail.com'} />
-			<Label text={'Введите пароль'} />
+			<Label text={'Enter password'} />
 			<PasswordInput placeholder={'******'} />
-			<Btn btnTitle={'Войти'} nav={navigation} navTo={'ToDoList'}/>
-			<Link text={'Зарегистрироваться'} nav={navigation} navTo={'Reg'}/>
+			<Btn btnTitle={'Sign In'} nav={navigation} navTo={'ToDoList'} />
+			<BtnSecond btnTitle={'Sign Up'} nav={navigation} navTo={'Reg'} />
 		</View>
 	)
 }

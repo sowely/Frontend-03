@@ -5,6 +5,7 @@ import PasswordInput from '../../Components/Inputs/PasswordInput'
 import Label from '../../Components/Labels/Label'
 import Link from '../../Components/Links/Link'
 import Btn from '../../Components/Buttons/Button'
+import BtnSecond from '../../Components/Buttons/ButtonSecond'
 
 
 
@@ -13,11 +14,14 @@ const Reg = ({ navigation }) => {
 
 	return (
 		<View style={styles.container}>
-			<Label text={'Введите почту'} />
+			<Label text={'Enter your name'} />
+			<Input placeholder={'Billy Herrington'} />
+			<Label text={'Enter your email'} />
 			<Input placeholder={'example@mail.com'} />
-			<Label text={'Введите пароль'} />
+			<Label text={'Enter password'} />
 			<PasswordInput placeholder={'******'} />
-			<Btn btnTitle={'Создать аккаунт'} nav={navigation} navTo={'ToDoList'} />
+			<Btn btnTitle={'Sign Up!'} nav={navigation} navTo={'ToDoList'} />
+			<BtnSecond btnTitle={'Sign In'} nav={navigation} navTo={'Auth'} />
 		</View>
 	)
 }
